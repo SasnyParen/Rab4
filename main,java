@@ -7,13 +7,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int Votes = in.nextInt();
-        int[] VotesStatus = new int[17];
+        int[] VotesStatus = new int[16];
         for (int i = 0; i < VotesStatus.length; i++){
             VotesStatus[i] = 0;
         }
         for (int i = 0; i < Votes; i++){
             int VoteId = in.nextInt();
-            VotesStatus[VoteId] += 1;
+            VotesStatus[VoteId - 1] += 1;
         }
         int[][] Winners = {{0,0},{0,0},{0,0}};
         for (int i_w = 0; i_w < Winners.length; i_w++) {
